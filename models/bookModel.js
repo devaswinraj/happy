@@ -6,6 +6,6 @@ let BookSchema = mongoose.Schema({
     discription: String
 })
 
-let book = mongoose.model('book',BookSchema)
+let Book = mongoose.model('Book',BookSchema)
 
-module.exports = book
+module.exports = Book

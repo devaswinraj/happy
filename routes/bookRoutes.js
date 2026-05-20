@@ -1,18 +1,17 @@
 let express = require('express')
 let bookRouter = express.Router()
 
-const { createBook} = require('../control/bookControl')
+const { createBook,getBook, getBookById ,updateBook,deleteBook} = require('../controler/bookControler')
 
 bookRouter.post('/',createBook)
 
-// bookRouter.get('/books/id',getBookById)
+bookRouter.get('/:id',getBookById)
 
-// bookRouter.get('/books',getBook)
+bookRouter.get('/',getBook)
 
-// bookRouter.put('/books/id',updateBook)
+bookRouter.put('/:id',updateBook)
 
-// bookRouter.delete('/books/id',deleteBook)
+bookRouter.delete('/:id',deleteBook)
 
-// asdasjkdnasjkd
 
 module.exports = bookRouter
